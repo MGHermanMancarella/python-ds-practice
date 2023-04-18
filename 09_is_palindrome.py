@@ -21,3 +21,6 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    formated_phrase = [char.upper() for char in phrase if char != ' ']
+
+    return formated_phrase[::-1] == formated_phrase

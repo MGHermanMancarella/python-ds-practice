@@ -43,18 +43,19 @@ def list_manipulation(lst, command, location, value=None):
     if type(lst) != list:
         return None
 
-    location_i = 0 if location == 'beginning' else len(lst)-1
-    print(location_i)
-    if command == 'add' and location == 'beginning':
-        lst.insert(location_i, value)
+    if command == 'add' and location == 'beginning' :
+        lst.insert(0,value)
         return lst
-    elif command == 'add' and location == 'end':
+
+    elif command =='add' and location == 'end' :
         lst.append(value)
         return lst
-    elif command == 'remove':
-        removed = lst[location_i]
-        lst.remove(removed)
-        return removed
-    else:
-        return None
 
+    elif command == 'remove' and location =='beginning':
+        return lst.pop(0)
+
+    elif command == 'remove' and location =='end':
+        return lst.pop()
+
+    else :
+        return None
