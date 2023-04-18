@@ -13,7 +13,7 @@ def mode(nums):
     """
 
     num_counts = {num:nums.count(num) for num in nums}
-
+    print(num_counts)
     max = -10000
     max_count = 0
 
@@ -23,3 +23,4 @@ def mode(nums):
             max = num
 
     return max
+
